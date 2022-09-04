@@ -23,12 +23,16 @@ with this program. If not, see <https://www.gnu.org/licenses/>
 OBS_DECLARE_MODULE()
 OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
+extern struct obs_output_info stream_output_info;
+
 bool obs_module_load(void)
 {
 	blog(LOG_INFO, "plugin loaded successfully (version %s)",
 	     PLUGIN_VERSION);
+	obs_register_output(&stream_output_info);	
 	return true;
 }
+
 
 void obs_module_unload()
 {

@@ -78,6 +78,6 @@
             "qtVersion": 6
         }
     },
-    "name": "obs-plugintemplate",
+    "name": "auto-queue-stream",
     "version": "1.0.0"
 }
